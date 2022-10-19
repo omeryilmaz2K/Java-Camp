@@ -10,7 +10,8 @@ public class MainTest {
 		// sumOfTwoNumbersAlgorithm1();
 		// sumOfTwoNumbersAlgorithm2();
 		// sumOfTwoNumbersAlgorithm3();
-		sumOfTwoNumbersSquaresAlgorithm1();
+		// sumOfTwoNumbersSquaresAlgorithm1();
+		sumOfTwoNumbersSquaresAlgorithm2();
 	}
 
 	public static void sumOfTwoNumbersAlgorithm1() {
@@ -50,5 +51,13 @@ public class MainTest {
 		System.out.print("2. Sayı: ");
 		int num2 = scanner.nextInt();
 		System.out.println("Sayıların kareleri toplamı: " + (num1 * num1 + num2 * num2));
+	}
+	
+	public static void sumOfTwoNumbersSquaresAlgorithm2() {
+		System.out.print("1. Sayı: ");
+		int num1 = scanner.nextInt();
+		System.out.print("2. Sayı: ");
+		int num2 = scanner.nextInt();
+		System.out.println("Sayıların kareleri toplamı: " + (int)(Math.pow(num1, 2) + Math.pow(num2, 2)));
 	}
 }
