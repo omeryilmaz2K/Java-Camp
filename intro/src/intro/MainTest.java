@@ -8,7 +8,8 @@ public class MainTest {
 
 	public static void main(String[] args) {
 		// sumOfTwoNumbersAlgorithm1();
-		sumOfTwoNumbersAlgorithm2();
+		// sumOfTwoNumbersAlgorithm2();
+		sumOfTwoNumbersAlgorithm3();
 	}
 
 	public static void sumOfTwoNumbersAlgorithm1() {
@@ -27,6 +28,19 @@ public class MainTest {
 		System.out.print("2. Sayı: ");
 		int num2 = scanner.nextInt();
 		System.out.println("Sayıların toplamı: " + (num1 + num2));
+	}
+	
+	public static void sumOfTwoNumbersAlgorithm3() {
+		int num1 = 0, num2 = 0;
+		System.out.print("1. Sayı: ");
+		try {
+			num1 = scanner.nextInt();
+			System.out.print("2. Sayı: ");
+			num2 = scanner.nextInt();
+			System.out.println(String.format("%d + %d = %d", num1, num2, (num1 + num2)));
+		} catch (Exception e) {
+			System.out.println("Geçerli bir sayı girilmedi!");
+		}
 	}
 
 }
