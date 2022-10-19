@@ -13,7 +13,8 @@ public class MainTest {
 		// sumOfTwoNumbersSquaresAlgorithm1();
 		// sumOfTwoNumbersSquaresAlgorithm2();
 		// sumOfTwoNumbersSquaresAlgorithm3();
-		sumOfTwoNumbersSquaresAlgorithm4();
+		// sumOfTwoNumbersSquaresAlgorithm4();
+		sumOfCubesNumbersFrom1to100Algorithm1();
 	}
 
 	public static void sumOfTwoNumbersAlgorithm1() {
@@ -75,5 +76,15 @@ public class MainTest {
 	public static void sumOfTwoNumbersSquaresAlgorithm4() {
 		System.out.println("Karelerininin toplamını bulmak istediğiniz 2 sayıyı da enter'a basarak giriniz...");
 		System.out.println("Sayıların kareleri toplamı: " + (int)(Math.pow(scanner.nextInt(), 2) + Math.pow(scanner.nextInt(), 2)));
+	}
+	
+	public static void sumOfCubesNumbersFrom1to100Algorithm1() {
+		// 1 + 8 + 27 + 64 + 125 + 216 + 343 + 512 + 729 + 1000 = 3025
+		int sum = 0;
+		for (int i = 0; i < 10; i++) {
+			//sum += (i+1) * (i+1) * (i+1);
+			sum += Math.pow(i + 1, 3);
+		}
+		System.out.println(sum);
 	}
 }
