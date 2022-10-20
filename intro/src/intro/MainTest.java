@@ -20,7 +20,8 @@ public class MainTest {
 		// sumOfCubesNumbersFrom1to100Algorithm2();
 		// sumOfCubesNumbersFrom1to100Algorithm3();
 		// sumOfCubesNumbersFrom1to100Algorithm4();
-		calculateDateOfBirth();
+		// calculateDateOfBirth();
+		calculateFactorial();
 	}
 
 	public static void sumOfTwoNumbersAlgorithm1() {
@@ -141,5 +142,16 @@ public class MainTest {
 		LocalDate birthDate = LocalDate.of(year, month, day);
 		LocalDate now = LocalDate.now();
 		System.out.println("Yaşınız: " + Period.between(birthDate, now).getYears());
+	}
+	
+	public static void calculateFactorial() {
+		System.out.print("Faktöriyelini hesaplamak istediğiniz sayı: ");
+		int num = scanner.nextInt();
+		int i = num - 1;
+		while (i > 0) {
+			num *= i;
+			i--;
+		}
+		System.out.println("Sayınızın faktöriyeli: " + num);
 	}
 }
