@@ -5,7 +5,7 @@ import java.time.Period;
 import java.util.Scanner;
 
 public class MainTest {
-	
+
 	static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -23,7 +23,9 @@ public class MainTest {
 		// calculateDateOfBirth();
 		// calculateFactorial();
 		// calculateFactorial2();
-		calculateFactorial3();
+		// calculateFactorial3();
+		// calculateFactorial4();
+		calculateFactorial5();
 	}
 
 	public static void sumOfTwoNumbersAlgorithm1() {
@@ -35,7 +37,7 @@ public class MainTest {
 		System.out.println(sum);
 		// System.out.println(num1 + num2);
 	}
-	
+
 	public static void sumOfTwoNumbersAlgorithm2() {
 		System.out.print("1. Sayı: ");
 		int num1 = scanner.nextInt();
@@ -43,7 +45,7 @@ public class MainTest {
 		int num2 = scanner.nextInt();
 		System.out.println("Sayıların toplamı: " + (num1 + num2));
 	}
-	
+
 	public static void sumOfTwoNumbersAlgorithm3() {
 		int num1 = 0, num2 = 0;
 		System.out.print("1. Sayı: ");
@@ -56,7 +58,7 @@ public class MainTest {
 			System.out.println("Geçerli bir sayı girilmedi!");
 		}
 	}
-	
+
 	public static void sumOfTwoNumbersSquaresAlgorithm1() {
 		System.out.print("1. Sayı: ");
 		int num1 = scanner.nextInt();
@@ -64,39 +66,41 @@ public class MainTest {
 		int num2 = scanner.nextInt();
 		System.out.println("Sayıların kareleri toplamı: " + (num1 * num1 + num2 * num2));
 	}
-	
+
 	public static void sumOfTwoNumbersSquaresAlgorithm2() {
 		System.out.print("1. Sayı: ");
 		int num1 = scanner.nextInt();
 		System.out.print("2. Sayı: ");
 		int num2 = scanner.nextInt();
-		System.out.println("Sayıların kareleri toplamı: " + (int)(Math.pow(num1, 2) + Math.pow(num2, 2)));
+		System.out.println("Sayıların kareleri toplamı: " + (int) (Math.pow(num1, 2) + Math.pow(num2, 2)));
 	}
-	
+
 	public static void sumOfTwoNumbersSquaresAlgorithm3() {
 		System.out.print("1. Sayı: ");
 		int num1 = scanner.nextInt();
 		System.out.print("2. Sayı: ");
 		int num2 = scanner.nextInt();
-		int square = (int)(Math.pow(num1, 2) + Math.pow(num2, 2));
-		System.out.println(String.format("Sayıların kareleri toplamı: \n%d² + %d² = \n%d + %d = %d", num1, num2, (int)Math.pow(num1, 2), (int)Math.pow(num2, 2), square));
+		int square = (int) (Math.pow(num1, 2) + Math.pow(num2, 2));
+		System.out.println(String.format("Sayıların kareleri toplamı: \n%d² + %d² = \n%d + %d = %d", num1, num2,
+				(int) Math.pow(num1, 2), (int) Math.pow(num2, 2), square));
 	}
-	
+
 	public static void sumOfTwoNumbersSquaresAlgorithm4() {
 		System.out.println("Karelerininin toplamını bulmak istediğiniz 2 sayıyı da enter'a basarak giriniz...");
-		System.out.println("Sayıların kareleri toplamı: " + (int)(Math.pow(scanner.nextInt(), 2) + Math.pow(scanner.nextInt(), 2)));
+		System.out.println("Sayıların kareleri toplamı: "
+				+ (int) (Math.pow(scanner.nextInt(), 2) + Math.pow(scanner.nextInt(), 2)));
 	}
-	
+
 	public static void sumOfCubesNumbersFrom1to100Algorithm1() {
 		// 1 + 8 + 27 + 64 + 125 + 216 + 343 + 512 + 729 + 1000 = 3025
 		int sum = 0;
 		for (int i = 0; i < 10; i++) {
-			//sum += (i+1) * (i+1) * (i+1);
+			// sum += (i+1) * (i+1) * (i+1);
 			sum += Math.pow(i + 1, 3);
 		}
 		System.out.println(sum);
 	}
-	
+
 	public static void sumOfCubesNumbersFrom1to100Algorithm2() {
 		int sum = 0;
 		int i = 1;
@@ -106,7 +110,7 @@ public class MainTest {
 		}
 		System.out.println(sum);
 	}
-	
+
 	public static void sumOfCubesNumbersFrom1to100Algorithm3() {
 		int sum = 0;
 		int i = 1;
@@ -116,7 +120,7 @@ public class MainTest {
 		} while (i <= 10);
 		System.out.println(sum);
 	}
-	
+
 	public static void sumOfCubesNumbersFrom1to100Algorithm4() {
 		int i = 1, j = 1;
 		int sum = 0, sumj = 0;
@@ -127,13 +131,13 @@ public class MainTest {
 		}
 		System.out.println(sum);
 		while (j <= 10) {
-			System.out.print((int)Math.pow(j, 3) + (j != 10 ? " + " : " = "));
+			System.out.print((int) Math.pow(j, 3) + (j != 10 ? " + " : " = "));
 			sumj += Math.pow(j, 3);
 			j++;
 		}
 		System.out.println(sumj);
 	}
-	
+
 	public static void calculateDateOfBirth() {
 		System.out.print("Doğum tarihinizin yıl bilgisini giriniz: ");
 		int year = scanner.nextInt();
@@ -145,7 +149,7 @@ public class MainTest {
 		LocalDate now = LocalDate.now();
 		System.out.println("Yaşınız: " + Period.between(birthDate, now).getYears());
 	}
-	
+
 	public static void calculateFactorial() {
 		System.out.print("Faktöriyelini hesaplamak istediğiniz sayı: ");
 		int num = scanner.nextInt();
@@ -156,7 +160,7 @@ public class MainTest {
 		}
 		System.out.println("Sayınızın faktöriyeli: " + num);
 	}
-	
+
 	public static void calculateFactorial2() {
 		System.out.print("Faktöriyelini hesaplamak istediğiniz sayı: ");
 		int num = scanner.nextInt();
@@ -165,12 +169,13 @@ public class MainTest {
 		while (i > 0) {
 			System.out.print(i + (i == 1 ? " = " : " * "));
 			i--;
-			if (i == 0) break;
+			if (i == 0)
+				break;
 			num *= i;
 		}
 		System.out.print(num);
 	}
-	
+
 	public static void calculateFactorial3() {
 		System.out.print("Faktöriyelini hesaplamak istediğiniz sayı: ");
 		int num = scanner.nextInt();
@@ -183,4 +188,34 @@ public class MainTest {
 		}
 		System.out.println(fact);
 	}
+	
+	public static void calculateFactorial4() {
+		System.out.print("Faktöriyelini hesaplamak istediğiniz sayı: ");
+		int num = scanner.nextInt();
+		System.out.println(recursive(num));
+	}
+
+	static int fact = 1;
+
+	public static int recursive(int num) {
+		fact *= num;
+		System.out.print(num + (num == 1 ? " = " : " * "));
+		num--;
+		if (num > 0)
+			recursive(num);
+		return fact;
+	}
+	
+	public static void calculateFactorial5() {
+		System.out.print("Faktöriyelini hesaplamak istediğiniz sayı: ");
+		int num = scanner.nextInt();
+		System.out.println(recursive2(num) == 0 ? 1 : recursive2(num));
+	}
+	
+	public static int recursive2(int num) {
+		if (num > 1)
+			return num *= recursive2(--num);
+		return num;
+	}
+	
 }
