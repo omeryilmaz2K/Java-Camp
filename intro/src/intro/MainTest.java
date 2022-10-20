@@ -1,5 +1,7 @@
 package intro;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Scanner;
 
 public class MainTest {
@@ -17,7 +19,8 @@ public class MainTest {
 		// sumOfCubesNumbersFrom1to100Algorithm1();
 		// sumOfCubesNumbersFrom1to100Algorithm2();
 		// sumOfCubesNumbersFrom1to100Algorithm3();
-		sumOfCubesNumbersFrom1to100Algorithm4();
+		// sumOfCubesNumbersFrom1to100Algorithm4();
+		calculateDateOfBirth();
 	}
 
 	public static void sumOfTwoNumbersAlgorithm1() {
@@ -126,5 +129,17 @@ public class MainTest {
 			j++;
 		}
 		System.out.println(sumj);
+	}
+	
+	public static void calculateDateOfBirth() {
+		System.out.print("Doğum tarihinizin yıl bilgisini giriniz: ");
+		int year = scanner.nextInt();
+		System.out.print("Doğum tarihinizin ay bilgisini giriniz: ");
+		int month = scanner.nextInt();
+		System.out.print("Doğum tarihinizin gün bilgisini giriniz: ");
+		int day = scanner.nextInt();
+		LocalDate birthDate = LocalDate.of(year, month, day);
+		LocalDate now = LocalDate.now();
+		System.out.println("Yaşınız: " + Period.between(birthDate, now).getYears());
 	}
 }
