@@ -1,5 +1,6 @@
 package intro;
 
+import java.text.MessageFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Scanner;
@@ -25,7 +26,8 @@ public class MainTest {
 		// calculateFactorial2();
 		// calculateFactorial3();
 		// calculateFactorial4();
-		calculateFactorial5();
+		// calculateFactorial5();
+		sumInsteadOfMultiplyAlgorithm1();
 	}
 
 	public static void sumOfTwoNumbersAlgorithm1() {
@@ -218,4 +220,15 @@ public class MainTest {
 		return num;
 	}
 	
+	public static void sumInsteadOfMultiplyAlgorithm1() {
+		System.out.print("1. Sayı: ");
+		int num1 = scanner.nextInt();
+		System.out.print("2. Sayı: ");
+		int num2 = scanner.nextInt();
+		int sum = 0;
+		for (int i = 0; i < num2; i++) {
+			sum += num1;
+		}
+		System.out.println(MessageFormat.format("{0} * {1} = {2}", num1, num2, sum));
+	}
 }
