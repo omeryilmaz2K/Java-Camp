@@ -34,7 +34,8 @@ public class MainTest {
 		// subtractionInsteadOfDivisionAlgorithm3();
 		// findingTheNumberOfDigitsAlgorithm1();
 		// findingTheNumberOfDigitsAlgorithm2();
-		findingTheNumberOfDigitsAlgorithm3();
+		// findingTheNumberOfDigitsAlgorithm3();
+		sumOfTheCubesOfDigitsOf3DigitNumberAlgorithm1();
 	}
 
 	public static void sumOfTwoNumbersAlgorithm1() {
@@ -330,5 +331,20 @@ public class MainTest {
 		System.out.print("Basamak sayısını bulmak istediğiniz sayı: ");
 		String num = scanner.next();
 		System.out.println(MessageFormat.format("{0} sayısının, basamak sayısı: {1}", num, num.length()));
+	}
+	
+	public static void sumOfTheCubesOfDigitsOf3DigitNumberAlgorithm1() {
+		System.out.print("3 basamaklı bir sayı giriniz: ");
+		int num = scanner.nextInt();
+		int sum = 0;
+		if (num > 99 && num < 1000) {
+			int cubeOfHundreds = (int) Math.pow(num / 100, 3);
+			int cubeOfTens = (int) Math.pow((num % 100) / 10, 3);
+			int cubeOfOnes = (int) Math.pow((num % 100) % 10, 3);
+			sum = cubeOfHundreds + cubeOfTens + cubeOfOnes;
+			System.out.print(num + " sayısı, basamaklarının küpleri toplamına ");
+			System.out.print(num == sum ? "eşittir." : "eşit değildir.");
+		} else 
+			System.out.println("3 basamaklı bir sayı girilmelidir!");
 	}
 }
