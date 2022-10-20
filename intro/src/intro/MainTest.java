@@ -28,7 +28,8 @@ public class MainTest {
 		// calculateFactorial4();
 		// calculateFactorial5();
 		// sumInsteadOfMultiplyAlgorithm1();
-		sumInsteadOfMultiplyAlgorithm2();
+		// sumInsteadOfMultiplyAlgorithm2();
+		subtractionInsteadOfDivisionAlgorithm1();
 	}
 
 	public static void sumOfTwoNumbersAlgorithm1() {
@@ -245,5 +246,19 @@ public class MainTest {
 		if (num2 > 1)
 			return num1 + sumInsteadOfMultiplyRecursive(num1, --num2);
 		return num1;
+	}
+	
+	public static void subtractionInsteadOfDivisionAlgorithm1() {
+		System.out.print("Bölünen sayı: ");
+		int num1 = scanner.nextInt();
+		System.out.print("Bölen sayı: ");
+		int num2 = scanner.nextInt();
+		int dividend = num1, divider = num2;
+		int counter = 0;
+		while (num1 >= num2) {
+			num1 -= num2;
+			counter++;
+		}
+		System.out.println(MessageFormat.format("{0} / {1} = {2} | Kalan = {3}", dividend, divider, counter, num1));
 	}
 }
