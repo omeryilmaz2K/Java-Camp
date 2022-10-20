@@ -29,7 +29,9 @@ public class MainTest {
 		// calculateFactorial5();
 		// sumInsteadOfMultiplyAlgorithm1();
 		// sumInsteadOfMultiplyAlgorithm2();
-		subtractionInsteadOfDivisionAlgorithm1();
+		// subtractionInsteadOfDivisionAlgorithm1();
+		// subtractionInsteadOfDivisionAlgorithm2();
+		subtractionInsteadOfDivisionAlgorithm3();
 	}
 
 	public static void sumOfTwoNumbersAlgorithm1() {
@@ -260,5 +262,40 @@ public class MainTest {
 			counter++;
 		}
 		System.out.println(MessageFormat.format("{0} / {1} = {2} | Kalan = {3}", dividend, divider, counter, num1));
+	}
+	
+	public static void subtractionInsteadOfDivisionAlgorithm2() {
+		System.out.print("Bölünen sayı: ");
+		int num1 = scanner.nextInt();
+		System.out.print("Bölen sayı: ");
+		int num2 = scanner.nextInt();
+		int counter = 0;
+		System.out.print(MessageFormat.format("{0} / {1} = ", num1, num2));
+		subtractionInsteadOfDivisionRecursive(num1, num2, counter);
+	}
+	
+	public static void subtractionInsteadOfDivisionRecursive(int num1, int num2, int counter) {
+		if (num1 >= num2) {
+			num1 -= num2;
+			counter++;
+			subtractionInsteadOfDivisionRecursive(num1, num2, counter);
+		} else {
+			System.out.print(MessageFormat.format("{0} | Kalan: {1}", counter, num1));
+		}
+	}
+	
+	public static void subtractionInsteadOfDivisionAlgorithm3() {
+		System.out.print("Bölünen sayı: ");
+		int num1 = scanner.nextInt();
+		System.out.print("Bölen sayı: ");
+		int num2 = scanner.nextInt();
+		System.out.println(MessageFormat.format("{0} / {1} = {2} | Kalan: {3}", num1, num2, subtractionInsteadOfDivisionRecursive2(num1, num2), num1 % num2));
+	}
+	
+	public static int subtractionInsteadOfDivisionRecursive2(int num1, int num2) {
+		num1 -= num2;
+		if (num1 >= num2) 
+			return 1 + subtractionInsteadOfDivisionRecursive2(num1, num2);
+		return 1;
 	}
 }
