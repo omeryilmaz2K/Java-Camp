@@ -27,7 +27,8 @@ public class MainTest {
 		// calculateFactorial3();
 		// calculateFactorial4();
 		// calculateFactorial5();
-		sumInsteadOfMultiplyAlgorithm1();
+		// sumInsteadOfMultiplyAlgorithm1();
+		sumInsteadOfMultiplyAlgorithm2();
 	}
 
 	public static void sumOfTwoNumbersAlgorithm1() {
@@ -190,36 +191,36 @@ public class MainTest {
 		}
 		System.out.println(fact);
 	}
-	
+
 	public static void calculateFactorial4() {
 		System.out.print("Faktöriyelini hesaplamak istediğiniz sayı: ");
 		int num = scanner.nextInt();
-		System.out.println(recursive(num));
+		System.out.println(calculateFactorialRecursive(num));
 	}
 
 	static int fact = 1;
 
-	public static int recursive(int num) {
+	public static int calculateFactorialRecursive(int num) {
 		fact *= num;
 		System.out.print(num + (num == 1 ? " = " : " * "));
 		num--;
 		if (num > 0)
-			recursive(num);
+			calculateFactorialRecursive(num);
 		return fact;
 	}
-	
+
 	public static void calculateFactorial5() {
 		System.out.print("Faktöriyelini hesaplamak istediğiniz sayı: ");
 		int num = scanner.nextInt();
-		System.out.println(recursive2(num) == 0 ? 1 : recursive2(num));
+		System.out.println(calculateFactorialRecursive2(num) == 0 ? 1 : calculateFactorialRecursive2(num));
 	}
-	
-	public static int recursive2(int num) {
+
+	public static int calculateFactorialRecursive2(int num) {
 		if (num > 1)
-			return num *= recursive2(--num);
+			return num *= calculateFactorialRecursive2(--num);
 		return num;
 	}
-	
+
 	public static void sumInsteadOfMultiplyAlgorithm1() {
 		System.out.print("1. Sayı: ");
 		int num1 = scanner.nextInt();
@@ -230,5 +231,19 @@ public class MainTest {
 			sum += num1;
 		}
 		System.out.println(MessageFormat.format("{0} * {1} = {2}", num1, num2, sum));
+	}
+
+	public static void sumInsteadOfMultiplyAlgorithm2() {
+		System.out.print("1. Sayı: ");
+		int num1 = scanner.nextInt();
+		System.out.print("2. Sayı: ");
+		int num2 = scanner.nextInt();
+		System.out.println(sumInsteadOfMultiplyRecursive(num1, num2));
+	}
+
+	public static int sumInsteadOfMultiplyRecursive(int num1, int num2) {
+		if (num2 > 1)
+			return num1 + sumInsteadOfMultiplyRecursive(num1, --num2);
+		return num1;
 	}
 }
