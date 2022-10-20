@@ -33,7 +33,8 @@ public class MainTest {
 		// subtractionInsteadOfDivisionAlgorithm2();
 		// subtractionInsteadOfDivisionAlgorithm3();
 		// findingTheNumberOfDigitsAlgorithm1();
-		findingTheNumberOfDigitsAlgorithm2();
+		// findingTheNumberOfDigitsAlgorithm2();
+		findingTheNumberOfDigitsAlgorithm3();
 	}
 
 	public static void sumOfTwoNumbersAlgorithm1() {
@@ -323,5 +324,11 @@ public class MainTest {
 		if (num >= 10)
 			return 1 + findingTheNumberOfDigitsRecursive(num /= 10);
 		return 1;
+	}
+	
+	public static void findingTheNumberOfDigitsAlgorithm3() {
+		System.out.print("Basamak sayısını bulmak istediğiniz sayı: ");
+		String num = scanner.next();
+		System.out.println(MessageFormat.format("{0} sayısının, basamak sayısı: {1}", num, num.length()));
 	}
 }
