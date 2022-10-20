@@ -21,7 +21,9 @@ public class MainTest {
 		// sumOfCubesNumbersFrom1to100Algorithm3();
 		// sumOfCubesNumbersFrom1to100Algorithm4();
 		// calculateDateOfBirth();
-		calculateFactorial();
+		// calculateFactorial();
+		// calculateFactorial2();
+		calculateFactorial3();
 	}
 
 	public static void sumOfTwoNumbersAlgorithm1() {
@@ -153,5 +155,32 @@ public class MainTest {
 			i--;
 		}
 		System.out.println("Sayınızın faktöriyeli: " + num);
+	}
+	
+	public static void calculateFactorial2() {
+		System.out.print("Faktöriyelini hesaplamak istediğiniz sayı: ");
+		int num = scanner.nextInt();
+		System.out.print(num + "! = ");
+		int i = num;
+		while (i > 0) {
+			System.out.print(i + (i == 1 ? " = " : " * "));
+			i--;
+			if (i == 0) break;
+			num *= i;
+		}
+		System.out.print(num);
+	}
+	
+	public static void calculateFactorial3() {
+		System.out.print("Faktöriyelini hesaplamak istediğiniz sayı: ");
+		int num = scanner.nextInt();
+		System.out.print(num + "! = ");
+		int fact = 1;
+		while (num > 0) {
+			fact *= num;
+			System.out.print(num + (num == 1 ? " = " : " * "));
+			num--;
+		}
+		System.out.println(fact);
 	}
 }
