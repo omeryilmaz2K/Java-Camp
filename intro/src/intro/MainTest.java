@@ -16,7 +16,8 @@ public class MainTest {
 		// sumOfTwoNumbersSquaresAlgorithm4();
 		// sumOfCubesNumbersFrom1to100Algorithm1();
 		// sumOfCubesNumbersFrom1to100Algorithm2();
-		sumOfCubesNumbersFrom1to100Algorithm3();
+		// sumOfCubesNumbersFrom1to100Algorithm3();
+		sumOfCubesNumbersFrom1to100Algorithm4();
 	}
 
 	public static void sumOfTwoNumbersAlgorithm1() {
@@ -108,5 +109,22 @@ public class MainTest {
 			i++;
 		} while (i <= 10);
 		System.out.println(sum);
+	}
+	
+	public static void sumOfCubesNumbersFrom1to100Algorithm4() {
+		int i = 1, j = 1;
+		int sum = 0, sumj = 0;
+		while (i <= 10) {
+			System.out.print(String.format("%d³", i) + (i != 10 ? " + " : " = "));
+			sum += Math.pow(i, 3);
+			i++;
+		}
+		System.out.println(sum);
+		while (j <= 10) {
+			System.out.print((int)Math.pow(j, 3) + (j != 10 ? " + " : " = "));
+			sumj += Math.pow(j, 3);
+			j++;
+		}
+		System.out.println(sumj);
 	}
 }
