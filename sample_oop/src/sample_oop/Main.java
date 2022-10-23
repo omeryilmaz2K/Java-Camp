@@ -17,5 +17,8 @@ public class Main {
 			System.out.println(MessageFormat.format("{0}) {1}: {2} Yazan: {3}", book.getId(), book.getName(), book.getSubject(), book.getAuthor()));
 		}
 		Student student1 = new Student(0, "2113007016", "Ömer", "Yılmaz");
+		LibraryManager manager = new LibraryManager();
+		manager.addStudent(student1);
+		manager.addLastReadBook(student1, book3);
 	}
 }
