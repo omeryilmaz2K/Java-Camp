@@ -7,9 +7,8 @@ public class Instructor extends User {
 		
 	}
 	
-	public Instructor(int id, String firstName, String lastName, String branch) {
+	public Instructor(int id, String firstName, String lastName) {
 		super(id, firstName, lastName);
-		this.branch = branch;
 	}
 
 	public String getBranch() {
