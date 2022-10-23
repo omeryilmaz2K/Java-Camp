@@ -15,13 +15,15 @@ public class Main {
 		customer2.setFirstName("Ömer");
 		customer2.setLastName("Yılmaz");
 		CustomerManager manager = new CustomerManager();
-		manager.add(customer1);
-		manager.add(customer2);
+//		manager.add(customer1);
+//		manager.add(customer2);
 		SyndicateCustomer customer3 = new SyndicateCustomer();
 		customer3.setId(2);
 		customer3.setCustomerNumber("233465");
 		customer3.setSyndicateName("BASİSEN");
-		manager.add(customer3);
+//		manager.add(customer3);
+		Customer[] customers = { customer1, customer2, customer3 };
+		manager.addMultiple(customers);
 	}
 
 }
