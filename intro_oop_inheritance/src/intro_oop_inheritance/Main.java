@@ -9,11 +9,19 @@ public class Main {
 		customer1.setCompanyName("Hepsiburada");
 		customer1.setTaxNumber("3543433219");
 		IndividualCustomer customer2 = new IndividualCustomer();
-		customer2.setId(0);
+		customer2.setId(1);
 		customer2.setCustomerNumber("234365");
 		customer2.setNationalIdentity("48604381881");
 		customer2.setFirstName("Ömer");
 		customer2.setLastName("Yılmaz");
+		CustomerManager manager = new CustomerManager();
+		manager.add(customer1);
+		manager.add(customer2);
+		SyndicateCustomer customer3 = new SyndicateCustomer();
+		customer3.setId(2);
+		customer3.setCustomerNumber("233465");
+		customer3.setSyndicateName("BASİSEN");
+		manager.add(customer3);
 	}
 
 }
