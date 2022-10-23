@@ -13,7 +13,5 @@ public class Main {
 		System.out.println(instructor.getBranch());
 		studentManager.addUniversity(student, "Bandırma MYÖ");
 		System.out.println(student.getUniversity());
-		
 	}
-
 }
