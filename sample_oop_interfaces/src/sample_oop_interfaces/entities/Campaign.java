@@ -10,7 +10,6 @@ public class Campaign implements Entity {
 	}
 
 	public Campaign(int id, String name, String details) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.details = details;
